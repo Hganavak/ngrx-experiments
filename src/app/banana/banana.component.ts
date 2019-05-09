@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select} from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AppState, getMyBanana } from '../app.state';
-import { GetNewBanana, PeelBanana, EatBanana } from './state';
+import { GetNewBanana, PeelBanana, EatBanana, InitiateTimeHop } from './state';
 
 @Component({
     selector: 'app-banana',
@@ -36,6 +36,6 @@ export class BananaComponent implements OnInit {
     }
 
     timeHop() {
-
+      this.store.dispatch(new InitiateTimeHop(null));
     }
 }
