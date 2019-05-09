@@ -25,7 +25,7 @@ import { BananaComponent } from './banana/banana.component';
     EffectsModule.forRoot(effects),
     StoreModule.forRoot(reducers, {initialState}),
     StoreDevtoolsModule.instrument({
-      maxAge: 25
+      maxAge: 25 // Amount of history we want to keep track of
     })
   ],
   declarations: [ 
